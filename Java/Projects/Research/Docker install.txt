@@ -1,0 +1,57 @@
+1) uname -r
+2) sudo apt-get update
+extra package:
+sudo apt-get install curl \
+    linux-image-extra-$(uname -r) \
+    linux-image-extra-virtual
+
+3) sudo apt-get install apt-transport-https ca-certificates
+4) sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D (ubuntu 14.04)
+5) cd /etc/apt/sources.list.d/
+6) sudo vim docker.list
+# if sudo: vim: command not found then install 
+>>> sudo apt-get install vim
+7) sudo vim docker.list 
+# paste this: deb https://apt.dockerproject.org/repo ubuntu-trusty main (ubuntu 14.04)
+ctrl+0, i, :wq, esc
+8) sudo apt-get update
+9) apt-cache policy docker-engine
+10) sudo apt-get install linux-image-extra-$(uname -r)
+11) sudo apt-get install docker-engine
+12) docker --version
+13) sudo groupadd docker
+14) sudo usermod -aG docker $USER
+15) cd
+16)sudo reboot
+17) docker --version
+18) docker run hello-world
+        ####docker run in browser part
+19) docker run -d -P seqvence/static-site
+20) docker ps
+21) http://localhost:32769/
+22) sudo -i
+23) curl -L https://github.com/docker/compose/releases/download/1.10.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+24) chmod +x /usr/local/bin/docker-compose
+25) exit
+26) mkdir static-site
+27) cd static-site/
+28) nano docker-compose.yml
+29) web-server:
+ container_name: web
+ image: seqvence/static-site
+ ports:
+  - "8080:80"
+ mem_limit: 500M
+ restart: always
+save: ctrl+o, enter, ctrl+x
+30) docker-compose up -d
+31) docker ps
+32) sudo service docker restart
+33) http://0.0.0.0:8080/
+
+
+
+
+######Running the container
+34) docker run -it -p 8888:8888 gcr.io/tensorflow/tensorflow:1.0.0-rc1-devel-py3(python3)
+35) git clone https://github.com/random-forests/tutorials.git

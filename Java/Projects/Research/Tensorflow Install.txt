@@ -1,0 +1,33 @@
+installing tenosrflow using conda
+1.conda config --add channels conda-forge
+
+2.conda install tensorflow
+
+3.conda search tensorflow --channel conda-forge
+
+4.# Python 2.7
+$ conda create -n tensorflow python=2.7
+
+# Python 3.4
+$ conda create -n tensorflow python=3.4
+
+# Python 3.5
+
+$ conda create -n tensorflow python=3.5
+
+5.$ pyth
+(tensorflow)$  # Your prompt should change
+
+6. Linux/Mac OS X, Python 2.7/3.4/3.5, CPU only:
+(tensorflow)$ conda install -c conda-forge tensorflow
+
+When you are done using TensorFlow, deactivate the environment.
+
+(tensorflow)$ source deactivate
+
+$  # Your prompt should change back
+
+
+ for anaconda
+
+ export PATH="/home/msjahid/anaconda3/bin:$PATH"

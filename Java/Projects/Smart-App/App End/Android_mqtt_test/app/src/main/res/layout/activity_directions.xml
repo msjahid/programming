@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/direc"
+                tools:context="com.example.tz.geo_map_test.com.example.tz.geo_map_test.MainActivity">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="490dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        tools:context="com.example.tz.geo_map_test.com.example.tz.geo_map_test.DirectionsActivity"></fragment>
+
+    <TextView
+        android:id="@+id/distance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/cyan_A400"
+        android:textSize="16dp"
+        android:textStyle="italic"
+        android:text="Distance Between Locations : " />
+
+    <TextView
+        android:id="@+id/duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/cyan_A400"
+        android:textSize="16dp"
+        android:textStyle="italic"
+        android:layout_below="@+id/distance"
+        android:text="Time to reach : " />
+
+    <TextView
+        android:id="@+id/start_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/cyan_A400"
+        android:textSize="16dp"
+        android:textStyle="italic"
+        android:layout_below="@+id/duration"
+        android:text="Starting Address : " />
+
+    <TextView
+        android:id="@+id/destination_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/cyan_A400"
+        android:textSize="16dp"
+        android:textStyle="italic"
+        android:layout_below="@+id/start_address"
+        android:text="Destination Address : " />
+
+
+
+</RelativeLayout>
